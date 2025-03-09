@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Product Details Section -->
+  <section class="product-details">
+    <h1><%= product.name %></h1>
+    <p><%= product.description %></p>
+    <p>Price: <%= product.price %></p>
+    <img src="<%= product.imageUrl %>" alt="<%= product.name %>">
+    <form action="/products/<%= product._id %>" method="POST">
+      <button type="submit" class="delete-button">Delete Product</button>
+    </form>
+    <a href="/products" class="back-button">Back to Products</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Furlunux E-commerce. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
